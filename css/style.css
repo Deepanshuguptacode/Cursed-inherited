@@ -1,0 +1,85 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Section Styles */
+.section {
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.parallax {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    animation: moveBackground 20s linear infinite;
+}
+/* For non-parallax sections, set background color to black */
+.section:not(.parallax) {
+    background-color: black;
+}
+
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Typography */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 ;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.image-placeholder:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Floating Effect */
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
